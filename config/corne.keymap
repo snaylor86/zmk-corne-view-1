@@ -53,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &trans   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans   &trans    &trans         &trans        &trans     &trans
-                                        &trans        &trans        &kp SPACE       &kp RET  &trans    &trans
+&trans      &trans         &trans         &trans         &trans         &trans           &trans   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans   &trans    &trans         &trans        &trans     &trans
+                                          &trans         &trans         &kp SPACE        &kp RET  &trans    &trans
             >;
 
             label = "Mac Nav";
@@ -70,10 +70,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL     &kp AT     &kp HASH  &kp DLLR       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS  &kp ASTRK      &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
-&trans  &trans       &trans     &trans    &kp LESS_THAN  &kp LBRC                &kp RBRC               &kp GREATER_THAN  &kp QUESTION  &kp PIPE       &kp TILDE  &trans
-                                &trans    &trans         &kp SPACE               &kp RET                &trans            &trans
+&trans  &kp EXCL                &kp AT                  &kp HASH           &kp DLLR            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
+&trans  &mt LEFT_SHIFT PERCENT  &mt LEFT_CONTROL CARET  &mt LEFT_ALT AMPS  &mt LEFT_GUI ASTRK  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
+&trans  &trans                  &trans                  &trans             &kp LESS_THAN       &kp LBRC                &kp RBRC               &kp GREATER_THAN  &kp QUESTION  &kp PIPE       &kp TILDE  &trans
+                                                        &trans             &trans              &kp SPACE               &kp RET                &trans            &trans
             >;
 
             label = "Mac Sym";
@@ -81,10 +81,10 @@
 
         mac_num {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &kp KP_N7  &kp KP_N8        &kp KP_N9  &kp KP_SUBTRACT  &kp BSPC
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_PLUS      &kp KP_DIVIDE
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_N1  &kp KP_N2        &kp KP_N3  &kp ENTER        &kp KP_MULTIPLY
-                         &trans   &trans   &trans    &trans  &trans     &kp KP_NUMBER_0
+&trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &trans  &kp KP_N7  &kp KP_N8        &kp KP_N9  &kp KP_SUBTRACT  &kp BSPC
+&trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_ALT F7  &mt LEFT_GUI F8  &trans    &trans  &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_PLUS      &kp KP_DIVIDE
+&trans  &kp F9             &kp F10              &kp F11          &kp F12          &trans    &trans  &kp KP_N1  &kp KP_N2        &kp KP_N3  &kp ENTER        &kp KP_MULTIPLY
+                                                &trans           &trans           &trans    &trans  &trans     &kp KP_NUMBER_0
             >;
 
             label = "Mac Num";
@@ -106,10 +106,40 @@
 &kp ESC           &kp Q             &kp W               &kp E           &kp R           &kp T        &kp Y    &kp U            &kp I            &kp O                &kp P                      &kp BSPC
 &kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_GUI D  &mt LEFT_ALT F  &kp G        &kp H    &mt RIGHT_ALT J  &mt RIGHT_GUI K  &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
 &kp LEFT_CONTROL  &kp Z             &kp X               &kp C           &kp V           &kp B        &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &mo 1           &mo 3           &kp SPACE    &kp RET  &mo 2            &to 6
+                                                        &mo 6           &mo 8           &kp SPACE    &kp RET  &mo 7            &to 9
             >;
 
             label = "Win Base";
+        };
+
+        win_nav {
+            label = "Win Nav";
+            bindings = <
+&trans      &trans         &trans         &trans         &trans         &trans           &trans   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans   &trans    &trans         &trans        &trans     &trans
+                                          &trans         &trans         &kp SPACE        &kp RET  &trans    &trans
+            >;
+        };
+
+        win_sym {
+            label = "Win Sym";
+            bindings = <
+&trans  &kp EXCL                &kp AT                  &kp HASH           &kp DLLR            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
+&trans  &mt LEFT_SHIFT PERCENT  &mt LEFT_CONTROL CARET  &mt LEFT_GUI AMPS  &mt LEFT_ALT ASTRK  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
+&trans  &trans                  &trans                  &trans             &kp LESS_THAN       &kp LBRC                &kp RBRC               &kp GREATER_THAN  &kp QUESTION  &kp PIPE       &kp TILDE  &trans
+                                                        &trans             &trans              &kp SPACE               &kp RET                &trans            &trans
+            >;
+        };
+
+        win_num {
+            label = "Win Num";
+            bindings = <
+&trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &trans  &kp KP_N7  &kp KP_N8        &kp KP_N9  &kp KP_SUBTRACT  &kp BSPC
+&trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_GUI F7  &mt LEFT_ALT F8  &trans    &trans  &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_PLUS      &kp KP_DIVIDE
+&trans  &kp F9             &kp F10              &kp F11          &kp F12          &trans    &trans  &kp KP_N1  &kp KP_N2        &kp KP_N3  &kp ENTER        &kp KP_MULTIPLY
+                                                &trans           &trans           &trans    &trans  &trans     &kp KP_NUMBER_0
+            >;
         };
 
         win_game {
