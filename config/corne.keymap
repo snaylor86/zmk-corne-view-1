@@ -28,6 +28,13 @@
             layers = <5>;
             require-prior-idle-ms = <500>;
         };
+
+        win_game_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 37>;
+            require-prior-idle-ms = <500>;
+            layers = <9 4>;
+        };
     };
 
     macros {
@@ -80,10 +87,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp E           &kp R           &kp T        &kp Y    &kp U            &kp I                &kp O                &kp P                      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G        &kp H    &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C           &kp V           &kp B        &kp N    &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &mo 1           &mo 3           &kp SPACE    &kp RET  &mo 2            &mac_cmd_go_to_game
+&kp ESC           &kp Q             &kp W               &kp E           &kp R           &kp T    &kp Y  &kp U            &kp I                &kp O                &kp P                      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G    &kp H  &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
+                                                        &mo 1           &kp SPACE       &mo 3    &mo 2  &kp RETURN       &mac_cmd_go_to_game
             >;
 
             label = "Mac Base";
@@ -97,10 +104,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans         &trans         &trans         &trans         &trans           &trans   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans   &trans    &trans         &trans        &trans     &trans
-                                          &trans         &trans         &kp SPACE        &kp RET  &trans    &trans
+&trans      &trans         &trans         &trans         &trans         &trans           &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans    &trans         &trans        &trans     &trans
+                                          &trans         &trans         &trans           &trans  &trans    &trans
             >;
 
             label = "Mac Nav";
@@ -117,7 +124,7 @@
 &trans  &kp EXCL                &kp AT                  &kp HASH           &kp DLLR            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
 &trans  &mt LEFT_SHIFT PERCENT  &mt LEFT_CONTROL CARET  &mt LEFT_ALT AMPS  &mt LEFT_GUI ASTRK  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
 &trans  &trans                  &trans                  &trans             &kp LESS_THAN       &kp LBRC                &kp RBRC               &kp GREATER_THAN  &kp QUESTION  &kp PIPE       &kp TILDE  &trans
-                                                        &trans             &trans              &kp SPACE               &kp RET                &trans            &trans
+                                                        &trans             &trans              &trans                  &trans                 &trans            &trans
             >;
 
             label = "Mac Sym";
@@ -136,10 +143,10 @@
 
         mac_game {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D     &kp F     &kp G        &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LALT  &kp LGUI  &kp SPACE    &trans  &trans  &to 0
+&kp GRAVE  &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp LALT  &kp SPACE  &kp LGUI    &trans  &trans  &to 0
             >;
 
             label = "Mac_Game";
@@ -159,10 +166,10 @@
         win_nav {
             label = "Win Nav";
             bindings = <
-&trans      &trans         &trans         &trans         &trans         &trans           &trans   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans   &trans    &trans         &trans        &trans     &trans
-                                          &trans         &trans         &kp SPACE        &kp RET  &trans    &trans
+&trans      &trans         &trans         &trans         &trans         &trans           &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans    &trans         &trans        &trans     &trans
+                                          &trans         &trans         &trans           &trans  &trans    &trans
             >;
         };
 
@@ -172,7 +179,7 @@
 &trans  &kp EXCL                &kp AT                  &kp HASH           &kp DLLR            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
 &trans  &mt LEFT_SHIFT PERCENT  &mt LEFT_CONTROL CARET  &mt LEFT_GUI AMPS  &mt LEFT_ALT ASTRK  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
 &trans  &trans                  &trans                  &trans             &kp LESS_THAN       &kp LBRC                &kp RBRC               &kp GREATER_THAN  &kp QUESTION  &kp PIPE       &kp TILDE  &trans
-                                                        &trans             &trans              &kp SPACE               &kp RET                &trans            &trans
+                                                        &trans             &trans              &trans                  &trans                 &trans            &trans
             >;
         };
 
@@ -188,10 +195,10 @@
 
         win_game {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D         &kp F         &kp G        &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &trans  &trans  &tog 5
+&kp GRAVE  &kp Q  &kp W  &kp E             &kp R      &kp T           &kp Y         &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D             &kp F      &kp G           &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C             &kp V      &kp B           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &tog 5
             >;
 
             label = "Win Game";
