@@ -16,7 +16,7 @@
         compatible = "zmk,combos";
 
         to_win_base {
-            bindings = <&to 5>;
+            bindings = <&to 6>;
             key-positions = <11 23 35>;
             layers = <0>;
             require-prior-idle-ms = <500>;
@@ -25,7 +25,7 @@
         to_mac_base {
             bindings = <&to 0>;
             key-positions = <11 23 35>;
-            layers = <5>;
+            layers = <6>;
             require-prior-idle-ms = <500>;
         };
 
@@ -33,7 +33,7 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 37>;
             require-prior-idle-ms = <500>;
-            layers = <9 4>;
+            layers = <10 4>;
         };
     };
 
@@ -48,8 +48,22 @@
         mac_calc: maccalc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI &kp SPACE &kp C &kp A &kp L &kp C &kp RETURN>;
+            bindings = <&kt LGUI &kp SPACE &kt LGUI &kp C &kp A &kp L &kp C &kp RETURN>;
             label = "MACCALC";
+        };
+
+        mac_next_window: mac_next_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI &kp GRAVE &kt LGUI>;
+            label = "MAC_NEXT_WINDOW";
+        };
+
+        mac_previous_window: mac_previous_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI &kt LEFT_SHIFT &kp GRAVE &kt LGUI &kt LEFT_SHIFT>;
+            label = "MAC_PREVIOUS_WINDOW";
         };
     };
 
@@ -58,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_BUTTON_GO_TO_GAME";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&none>, <&to 9>;
+            bindings = <&kp LGUI>, <&none>, <&to 10>;
         };
 
         mac_cmd_go_to_game: mac_cmd_go_to_game {
@@ -74,6 +88,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kt CAPSLOCK>;
         };
+
+        mac_nav_and_util: mac_nav_and_util {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAC_NAV_AND_UTIL";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&none>, <&mo 5>;
+        };
+
+        win_nav_and_util: win_nav_and_util {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_NAV_AND_UTIL";
+            #binding-cells = <0>;
+            bindings = <&mo 7>, <&none>, <&mo 11>;
+        };
     };
 
     keymap {
@@ -87,10 +115,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp E           &kp R           &kp T    &kp Y  &kp U            &kp I                &kp O                &kp P                      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G    &kp H  &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &mo 1           &kp SPACE       &mo 3    &mo 2  &kp RETURN       &mac_cmd_go_to_game
+&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T    &kp Y  &kp U            &kp I                &kp O                &kp P                      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D     &mt LEFT_GUI F  &kp G    &kp H  &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B    &kp N  &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
+                                                        &mac_nav_and_util  &kp SPACE       &mo 3    &mo 2  &kp RETURN       &mac_cmd_go_to_game
             >;
 
             label = "Mac Base";
@@ -104,10 +132,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans         &trans         &trans         &trans         &trans           &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans    &trans         &trans        &trans     &trans
-                                          &trans         &trans         &trans           &trans  &trans    &trans
+&trans  &trans  &trans  &mac_previous_window  &mac_next_window  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans  &trans  &trans  &trans                &trans            &trans    &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans                &trans            &trans    &trans  &trans    &trans         &trans        &trans     &trans
+                        &trans                &trans            &trans    &trans  &trans    &trans
             >;
 
             label = "Mac Nav";
@@ -152,12 +180,22 @@
             label = "Mac_Game";
         };
 
+        mac_util {
+            label = "Mac Util";
+            bindings = <
+&trans      &trans         &trans         &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans         &trans         &trans           &trans  &trans  &trans
+            >;
+        };
+
         win_base {
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp E           &kp R           &kp T    &kp Y  &kp U            &kp I                   &kp O                &kp P                      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_GUI D  &mt LEFT_ALT F  &kp G    &kp H  &mt RIGHT_ALT J  &mt RIGHT_GUI K         &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA               &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &mo 6           &kp SPACE       &mo 8    &mo 7  &kp RETURN       &win_button_go_to_game
+&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T    &kp Y  &kp U            &kp I                   &kp O                &kp P                      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_GUI D     &mt LEFT_ALT F  &kp G    &kp H  &mt RIGHT_ALT J  &mt RIGHT_GUI K         &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B    &kp N  &kp M            &kp COMMA               &kp DOT              &kp FSLH                   &kp DELETE
+                                                        &win_nav_and_util  &kp SPACE       &mo 9    &mo 8  &kp RETURN       &win_button_go_to_game
             >;
 
             label = "Win Base";
@@ -166,10 +204,10 @@
         win_nav {
             label = "Win Nav";
             bindings = <
-&trans      &trans         &trans         &trans         &trans         &trans           &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans    &trans         &trans        &trans     &trans
-                                          &trans         &trans         &trans           &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans         &trans        &trans     &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
 
@@ -198,10 +236,20 @@
 &kp GRAVE  &kp Q  &kp W  &kp E             &kp R      &kp T           &kp Y         &kp U   &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D             &kp F      &kp G           &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LSHFT  &kp Z  &kp X  &kp C             &kp V      &kp B           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &tog 5
+                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &tog 6
             >;
 
             label = "Win Game";
+        };
+
+        win_util {
+            label = "Win Util";
+            bindings = <
+&trans      &trans         &trans         &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans         &trans         &trans           &trans  &trans  &trans
+            >;
         };
     };
 };
