@@ -121,7 +121,7 @@
                                                         &mac_nav_and_util  &kp SPACE       &mo 3    &mo 2  &kp RETURN       &mac_cmd_go_to_game
             >;
 
-            label = "Mac Base";
+            label = "Mc Base";
         };
 
         mac_nav {
@@ -138,7 +138,7 @@
                         &trans                &trans            &trans    &trans  &trans    &trans
             >;
 
-            label = "Mac Nav";
+            label = "Mc Nav";
         };
 
         mac_sym {
@@ -155,7 +155,7 @@
                                                         &trans             &trans              &trans                  &trans                 &trans            &trans
             >;
 
-            label = "Mac Sym";
+            label = "Mc Sym";
         };
 
         mac_num {
@@ -166,7 +166,7 @@
                                                 &trans           &trans           &trans    &trans     &trans     &kp KP_NUMBER_0
             >;
 
-            label = "Mac Num";
+            label = "Mc Num";
         };
 
         mac_game {
@@ -177,11 +177,11 @@
                          &kp LALT  &kp SPACE  &kp LGUI    &trans  &trans  &to 0
             >;
 
-            label = "Mac_Game";
+            label = "Mc Game";
         };
 
         mac_util {
-            label = "Mac Util";
+            label = "Mc Util";
             bindings = <
 &trans      &trans         &trans         &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans  &trans
@@ -198,11 +198,11 @@
                                                         &win_nav_and_util  &kp SPACE       &mo 9    &mo 8  &kp RETURN       &win_button_go_to_game
             >;
 
-            label = "Win Base";
+            label = "Wn Base";
         };
 
         win_nav {
-            label = "Win Nav";
+            label = "Wn Nav";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
@@ -212,7 +212,7 @@
         };
 
         win_sym {
-            label = "Win Sym";
+            label = "Wn Sym";
             bindings = <
 &trans  &kp EXCL                &kp AT                  &kp HASH           &kp DLLR            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER     &kp EQUAL      &kp PLUS   &trans
 &trans  &mt LEFT_SHIFT PERCENT  &mt LEFT_CONTROL CARET  &mt LEFT_GUI AMPS  &mt LEFT_ALT ASTRK  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans            &kp SLASH     &kp BACKSLASH  &kp GRAVE  &trans
@@ -222,7 +222,7 @@
         };
 
         win_num {
-            label = "Win Num";
+            label = "Wn Num";
             bindings = <
 &trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &win_calc  &kp KP_N7  &kp KP_N8        &kp KP_N9  &kp KP_SUBTRACT  &kp BSPC
 &trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_GUI F7  &mt LEFT_ALT F8  &trans    &trans     &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_PLUS      &kp KP_DIVIDE
@@ -239,11 +239,11 @@
                          &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &tog 6
             >;
 
-            label = "Win Game";
+            label = "Wn Game";
         };
 
         win_util {
-            label = "Win Util";
+            label = "Wn Util";
             bindings = <
 &trans      &trans         &trans         &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans  &trans
