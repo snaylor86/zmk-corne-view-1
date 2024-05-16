@@ -15,14 +15,14 @@
     combos {
         compatible = "zmk,combos";
 
-        to_win_base {
+        to_win_base_qwerty {
             bindings = <&to 7>;
             key-positions = <11 23 35>;
             layers = <1>;
             require-prior-idle-ms = <500>;
         };
 
-        to_mac_base {
+        to_mac_base_qwerty {
             bindings = <&to 1>;
             key-positions = <11 23 35>;
             layers = <7>;
@@ -36,28 +36,40 @@
             layers = <12 5>;
         };
 
-        to_mac_colemak_dh {
+        switch_to_mac_colemak_dh {
             bindings = <&to 1>;
             key-positions = <0 12 24>;
             layers = <0>;
         };
 
-        to_mac_qwerty {
+        switch_to_mac_qwerty {
             bindings = <&to 0>;
             key-positions = <0 12 24>;
             layers = <1>;
         };
 
-        to_win_colemak_dh {
+        switch_to_win_colemak_dh {
             bindings = <&to 9>;
             key-positions = <0 12 24>;
             layers = <7>;
         };
 
-        to_win_qwerty {
+        switch_to_win_qwerty {
             bindings = <&to 7>;
             key-positions = <0 12 24>;
             layers = <9>;
+        };
+
+        to_mac_colemak_dh {
+            bindings = <&to 1>;
+            key-positions = <11 23 35>;
+            layers = <8>;
+        };
+
+        to_win_colemak_dh {
+            bindings = <&to 8>;
+            key-positions = <11 23 35>;
+            layers = <1>;
         };
     };
 
