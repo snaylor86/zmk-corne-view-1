@@ -23,7 +23,7 @@
         };
 
         to_mac_base_qwerty {
-            bindings = <&to 1>;
+            bindings = <&to 0>;
             key-positions = <11 23 35>;
             layers = <7>;
             require-prior-idle-ms = <500>;
