@@ -42,7 +42,7 @@
             layers = <0>;
         };
 
-        to_mac_base {
+        to_mac_qwerty {
             bindings = <&to 0>;
             key-positions = <0 12 24>;
             layers = <1>;
@@ -54,7 +54,7 @@
             layers = <7>;
         };
 
-        to_win_base {
+        to_win_qwerty {
             bindings = <&to 7>;
             key-positions = <0 12 24>;
             layers = <9>;
