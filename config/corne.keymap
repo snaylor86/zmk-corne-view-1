@@ -220,7 +220,7 @@
 &kp GRAVE  &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LALT  &kp SPACE  &kp LGUI    &trans  &trans  &to 1
+                         &kp LALT  &kp SPACE  &kp LGUI    &trans  &trans  &to 0
             >;
 
             label = "Mc Game";
@@ -292,7 +292,7 @@
 &kp GRAVE  &kp Q  &kp W  &kp E             &kp R      &kp T           &kp Y         &kp U   &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D             &kp F      &kp G           &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LSHFT  &kp Z  &kp X  &kp C             &kp V      &kp B           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &tog 7
+                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &to 7
             >;
 
             label = "Wn Game";
