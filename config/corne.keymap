@@ -136,7 +136,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_NAV_AND_UTIL";
             #binding-cells = <0>;
-            bindings = <&mo 10>, <&none>, <&mo 13>;
+            bindings = <&mo 9>, <&none>, <&mo 13>;
         };
     };
 
