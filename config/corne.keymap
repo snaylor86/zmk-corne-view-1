@@ -146,10 +146,10 @@
         mac_base {
             label = "Mc Base";
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T    &kp Y  &kp U            &kp I                &kp O                &kp P                      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D     &mt LEFT_GUI F  &kp G    &kp H  &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B    &kp N  &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &mac_nav_and_util  &kp SPACE       &mo 4    &mo 3  &kp RETURN       &mac_cmd_go_to_game
+&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T        &kp Y       &kp U            &kp I                &kp O                &kp P                      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D     &mt LEFT_GUI F  &kp G        &kp H       &mt RIGHT_GUI J  &mt RIGHT_ALT K      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B        &kp N       &kp M            &kp COMMA            &kp DOT              &kp FSLH                   &kp DELETE
+                                                        &mac_nav_and_util  &mo 4           &kp SPACE    &kp RETURN  &mo 3            &mac_cmd_go_to_game
             >;
         };
 
@@ -161,10 +161,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp F              &kp P           &kp B    &kp J  &kp L            &kp U                &kp Y                &kp SEMICOLON      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL R  &mt LEFT_ALT S     &mt LEFT_GUI T  &kp G    &kp M  &mt RIGHT_GUI N  &mt RIGHT_ALT E      &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C              &kp D           &kp V    &kp K  &kp H            &kp COMMA            &kp DOT              &kp FSLH           &kp DELETE
-                                                        &mac_nav_and_util  &kp SPACE       &mo 4    &mo 3  &kp RETURN       &mac_cmd_go_to_game
+&kp ESC           &kp Q             &kp W               &kp F              &kp P           &kp B        &kp J    &kp L            &kp U                &kp Y                &kp SEMICOLON      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL R  &mt LEFT_ALT S     &mt LEFT_GUI T  &kp G        &kp M    &mt RIGHT_GUI N  &mt RIGHT_ALT E      &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp D           &kp V        &kp K    &kp H            &kp COMMA            &kp DOT              &kp FSLH           &kp DELETE
+                                                        &mac_nav_and_util  &mo 4           &kp SPACE    &kp RET  &mo 3            &mac_cmd_go_to_game
             >;
 
             label = "Mc CDH Base";
@@ -209,7 +209,7 @@
 &trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &mac_calc  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_SUBTRACT  &kp BSPC
 &trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_ALT F7  &mt LEFT_GUI F8  &trans    &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS      &kp KP_DIVIDE
 &trans  &kp F9             &kp F10              &kp F11          &kp F12          &trans    &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT       &kp KP_MULTIPLY
-                                                &trans           &trans           &trans    &kp N0     &trans        &trans
+                                                &trans           &trans           &trans    &trans     &kp NUMBER_0  &trans
             >;
 
             label = "Mc Num";
@@ -217,10 +217,10 @@
 
         mac_game {
             bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LALT  &kp SPACE  &kp LGUI    &trans  &trans  &to 0
+&kp GRAVE  &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D     &kp F     &kp G        &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp LALT  &kp LGUI  &kp SPACE    &trans  &trans  &to 0
             >;
 
             label = "Mc Game";
@@ -238,10 +238,10 @@
 
         win_base {
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T     &kp Y   &kp U            &kp I                   &kp O                &kp P                      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_GUI D     &mt LEFT_ALT F  &kp G     &kp H   &mt RIGHT_ALT J  &mt RIGHT_GUI K         &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B     &kp N   &kp M            &kp COMMA               &kp DOT              &kp FSLH                   &kp DELETE
-                                                        &win_nav_and_util  &kp SPACE       &mo 11    &mo 10  &kp RETURN       &win_button_go_to_game
+&kp ESC           &kp Q             &kp W               &kp E              &kp R           &kp T        &kp Y       &kp U            &kp I                   &kp O                &kp P                      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_GUI D     &mt LEFT_ALT F  &kp G        &kp H       &mt RIGHT_ALT J  &mt RIGHT_GUI K         &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp V           &kp B        &kp N       &kp M            &kp COMMA               &kp DOT              &kp FSLH                   &kp DELETE
+                                                        &win_nav_and_util  &mo 11          &kp SPACE    &kp RETURN  &mo 10           &win_button_go_to_game
             >;
 
             label = "Wn Base";
@@ -250,10 +250,10 @@
         win_base_colemak_dh {
             label = "Wn CDH Base";
             bindings = <
-&kp ESC           &kp Q             &kp W               &kp F              &kp P           &kp B     &kp J   &kp L            &kp U                   &kp Y                &kp SEMICOLON      &kp BSPC
-&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL R  &mt LEFT_GUI S     &mt LEFT_ALT T  &kp G     &kp M   &mt RIGHT_ALT N  &mt RIGHT_GUI E         &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &kp SQT
-&shift_caps_lock  &kp Z             &kp X               &kp C              &kp D           &kp V     &kp K   &kp H            &kp COMMA               &kp DOT              &kp FSLH           &kp DELETE
-                                                        &win_nav_and_util  &kp SPACE       &mo 11    &mo 10  &kp RETURN       &win_button_go_to_game
+&kp ESC           &kp Q             &kp W               &kp F              &kp P           &kp B        &kp J       &kp L            &kp U                   &kp Y                &kp SEMICOLON      &kp BSPC
+&kp TAB           &mt LEFT_SHIFT A  &mt LEFT_CONTROL R  &mt LEFT_GUI S     &mt LEFT_ALT T  &kp G        &kp M       &mt RIGHT_ALT N  &mt RIGHT_GUI E         &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O  &kp SQT
+&shift_caps_lock  &kp Z             &kp X               &kp C              &kp D           &kp V        &kp K       &kp H            &kp COMMA               &kp DOT              &kp FSLH           &kp DELETE
+                                                        &win_nav_and_util  &mo 11          &kp SPACE    &kp RETURN  &mo 10           &win_button_go_to_game
             >;
         };
 
@@ -280,19 +280,19 @@
         win_num {
             label = "Wn Num";
             bindings = <
-&trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &win_calc     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_SUBTRACT  &kp BSPC
-&trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_GUI F7  &mt LEFT_ALT F8  &trans    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS      &kp KP_DIVIDE
-&trans  &kp F9             &kp F10              &kp F11          &kp F12          &trans    &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LA(KP_DOT)   &kp KP_MULTIPLY
-                                                &trans           &trans           &trans    &kp NUMBER_0  &trans        &trans
+&trans  &kp F1             &kp F2               &kp F3           &kp F4           &trans    &win_calc  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_SUBTRACT  &kp BSPC
+&trans  &mt LEFT_SHIFT F5  &mt LEFT_CONTROL F6  &mt LEFT_GUI F7  &mt LEFT_ALT F8  &trans    &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS      &kp KP_DIVIDE
+&trans  &kp F9             &kp F10              &kp F11          &kp F12          &trans    &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LA(KP_DOT)   &kp KP_MULTIPLY
+                                                &trans           &trans           &trans    &trans     &kp NUMBER_0  &trans
             >;
         };
 
         win_game {
             bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp E             &kp R      &kp T           &kp Y         &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D             &kp F      &kp G           &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C             &kp V      &kp B           &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &kp LEFT_GUI  &trans  &to 7
+&kp GRAVE  &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y   &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D             &kp F         &kp G        &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE    &trans  &kp LGUI  &to 7
             >;
 
             label = "Wn Game";
